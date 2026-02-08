@@ -62,7 +62,7 @@ The [logit][logit] function is the inverse of the [standard logistic][standard-l
 To use in Observable,
 
 ```javascript
-logitf = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-logitf@umd/browser.js' )
+logitf = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-logitf@v0.1.1-umd/browser.js' )
 ```
 
 To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
@@ -74,7 +74,7 @@ var logitf = require( 'path/to/vendor/umd/math-base-special-logitf/index.js' )
 To include the bundle in a webpage,
 
 ```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-logitf@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-logitf@v0.1.1-umd/browser.js"></script>
 ```
 
 If no recognized module system is present, access bundle contents via the global scope:
@@ -125,7 +125,7 @@ v = logitf( -0.2 );
 <body>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-array-uniform@umd/browser.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-logitf@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-logitf@v0.1.1-umd/browser.js"></script>
 <script type="text/javascript">
 (function () {
 
