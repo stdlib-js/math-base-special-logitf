@@ -53,19 +53,32 @@ The [logit][logit] function is the inverse of the [standard logistic][standard-l
 
 <!-- /.intro -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-base-special-logitf
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import logitf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-logitf@deno/mod.js';
-```
-The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/math-base-special-logitf/tags). For example,
-
-```javascript
-import logitf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-logitf@v0.1.0-deno/mod.js';
+var logitf = require( '@stdlib/math-base-special-logitf' );
 ```
 
 #### logitf( p )
@@ -101,9 +114,9 @@ v = logitf( -0.2 );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-array-uniform@deno/mod.js';
-import logEachMap from 'https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@deno/mod.js';
-import logitf from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-logitf@deno/mod.js';
+var uniform = require( '@stdlib/random-array-uniform' );
+var logEachMap = require( '@stdlib/console-log-each-map' );
+var logitf = require( '@stdlib/math-base-special-logitf' );
 
 var opts = {
     'dtype': 'float32'
@@ -119,7 +132,93 @@ logEachMap( 'logitf(%0.4f) = %0.4f', p, logitf );
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/math/base/special/logitf.h"
+```
+
+#### stdlib_base_logitf( p )
+
+Computes the [logit][logit] function for a single-precision floating-point number.
+
+```c
+float out = stdlib_base_logitf( 0.2f );
+// returns ~-1.386f
+
+out = stdlib_base_logitf( 0.9f );
+// returns ~2.197f
+```
+
+The function accepts the following arguments:
+
+-   **p**: `[in] float` input value.
+
+```c
+float stdlib_base_logitf( const float p );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/math/base/special/logitf.h"
+#include <stdlib.h>
+#include <stdio.h>
+
+int main( void ) {
+    float x;
+    float v;
+    int i;
+
+    for ( i = 0; i < 100; i++ ) {
+        x = (float)rand() / (float)RAND_MAX;
+        v = stdlib_base_logitf( x );
+        printf( "logitf(%f) = %f\n", x, v );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -138,7 +237,7 @@ logEachMap( 'logitf(%0.4f) = %0.4f', p, logitf );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -168,8 +267,8 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/math-base-special-logitf.svg
 [npm-url]: https://npmjs.org/package/@stdlib/math-base-special-logitf
 
-[test-image]: https://github.com/stdlib-js/math-base-special-logitf/actions/workflows/test.yml/badge.svg?branch=v0.1.0
-[test-url]: https://github.com/stdlib-js/math-base-special-logitf/actions/workflows/test.yml?query=branch:v0.1.0
+[test-image]: https://github.com/stdlib-js/math-base-special-logitf/actions/workflows/test.yml/badge.svg?branch=v0.1.1
+[test-url]: https://github.com/stdlib-js/math-base-special-logitf/actions/workflows/test.yml?query=branch:v0.1.1
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/math-base-special-logitf/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/math-base-special-logitf?branch=main
